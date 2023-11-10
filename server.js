@@ -7,24 +7,6 @@ const rutasMedicamentos = require("./routes/rutasMedicamentos.js");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-/*
-const uri = "mongodb://127.0.0.1:27017/vademecum";
-const options = { useNewUrlParser: true, useUnifiedTopology: true };
-
-
-// Conectar a MongoDB
-async function connectToMongoDB(uri, options) {
-    try {
-        await mongoose.connect(uri, options);
-        console.log("Conectado a MongoDB");
-    } catch (err) {
-        console.error("Error al conectar a MongoDB:", err);
-    };
-};
-
-// Llamar a la función
-connectToMongoDB(uri, options);
-*/
 mongoose
   .connect(process.env.mongo_uri)
   .then(() => console.log("Connected to MongoDB Atlas"))
