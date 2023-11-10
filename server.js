@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+
 const app = express();
 const rutasUsuarios = require("./routes/rutasUsuarios.js");
 const rutasCategorias = require("./routes/rutasCategorias.js");
@@ -33,7 +33,7 @@ mongoose
 
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
-app.use(cors());
+
 
 
 //RUTAS
